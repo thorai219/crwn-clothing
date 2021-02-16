@@ -1,17 +1,15 @@
-import React, { Component } from "react";
-
-import "./sign-in.styles.scss";
+import React from "react";
 
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
-import {
-  signInWithGoogle,
-  SignInWithGoogle,
-} from "../../firebase/firebase.utils";
 
-class SignIn extends Component {
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
+import "./sign-in.styles.scss";
+
+class SignIn extends React.Component {
   constructor(props) {
-    super();
+    super(props);
 
     this.state = {
       email: "",
@@ -19,14 +17,14 @@ class SignIn extends Component {
     };
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
+  handleSubmit = (event) => {
+    event.preventDefault();
 
     this.setState({ email: "", password: "" });
   };
 
-  handleChange = (e) => {
-    const { value, name } = e.target;
+  handleChange = (event) => {
+    const { value, name } = event.target;
 
     this.setState({ [name]: value });
   };
@@ -39,25 +37,25 @@ class SignIn extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
-            type="email"
             name="email"
-            value={this.state.email}
+            type="email"
             handleChange={this.handleChange}
+            value={this.state.email}
             label="email"
             required
           />
           <FormInput
-            type="password"
             name="password"
+            type="password"
             value={this.state.password}
             handleChange={this.handleChange}
             label="password"
             required
           />
           <div className="buttons">
-            <CustomButton type="submit">Sign in</CustomButton>
+            <CustomButton type="submit"> Sign in </CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
-              Sign in Google
+              Sign in with Google
             </CustomButton>
           </div>
         </form>
