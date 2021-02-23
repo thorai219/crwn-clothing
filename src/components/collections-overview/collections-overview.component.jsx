@@ -5,15 +5,15 @@ import { selectCollectionsForPreview } from "../../redux/shop/shop.selector";
 
 import CollectionPreview from "../preview-collection/collection-preview.component";
 
-import "./collections-overview.styles.scss";
+import { CollectionsOverviewContainer } from "./collections-overview.styles";
 
 const CollectionsOverview = ({ collections }) => {
   return (
-    <div className="collections-overview">
+    <CollectionsOverviewContainer>
       {collections.map(({ id, ...otherCollectionsProps }) => (
         <CollectionPreview key={id} {...otherCollectionsProps} />
       ))}
-    </div>
+    </CollectionsOverviewContainer>
   );
 };
 
