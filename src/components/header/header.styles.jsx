@@ -8,12 +8,6 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 25px;
 
-  @media screen and (max-width: 400px) {
-    flex-direction: column;
-    align-items: center;
-    height: 100px;
-  }
-
   @media screen and (max-width: 800px) {
     height: 60px;
     padding: 10px;
@@ -39,10 +33,6 @@ export const OptionsContainer = styled.div`
   align-items: center;
   justify-content: flex-end;
 
-  @media screen and (max-width: 400px) {
-    width: 100vw;
-  }
-
   @media screen and (max-width: 800px) {
     width: 80%;
   }
@@ -51,8 +41,4 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
-
-  @media screen and (max-width: 400px) {
-    width: 100%;
-  }
 `;

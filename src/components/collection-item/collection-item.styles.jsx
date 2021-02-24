@@ -20,6 +20,7 @@ export const CollectionItemContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     width: 40vw;
+    margin: 0 auto;
 
     &:hover {
       .image {
@@ -30,6 +31,11 @@ export const CollectionItemContainer = styled.div`
         display: flex;
       }
     }
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 80vw;
+    margin-bottom: 40px;
   }
 `;
 

@@ -52,6 +52,10 @@ export const ContentContainer = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
+
+  @media screen and (max-width: 400px) {
+    height: 70px;
+  }
 `;
 
 export const ContentTitle = styled.span`
@@ -59,9 +63,15 @@ export const ContentTitle = styled.span`
   margin-bottom: 6px;
   font-size: 22px;
   color: #4a4a4a;
+  @media screen and (max-width: 400px) {
+    font-size: 18px;
+  }
 `;
 
 export const ContentSubtitle = styled.span`
   font-weight: lighter;
   font-size: 16px;
+  @media screen and (max-width: 400px) {
+    font-size: 14px;
+  }
 `;

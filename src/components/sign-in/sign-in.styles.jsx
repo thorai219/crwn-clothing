@@ -5,9 +5,10 @@ export const SignInContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 500px) {
-    width: 80vw;
+  @media screen and (max-width: 400px) {
+    width: 90vw;
     padding: 10px;
+    margin-bottom: 30px;
   }
 `;
 
